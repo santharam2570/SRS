@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FinanceERP — Loan Management System
+
+A modern, full-featured **Finance Company Loan Management ERP** built with Next.js, covering the complete loan lifecycle from application to closure.
+
+## Features (23 Modules)
+
+| Module | Description |
+|--------|-------------|
+| **Dashboard** | KPI widgets, collection charts, workflow status, pending approvals |
+| **Customer Management** | Borrower profiles, co-applicants, guarantors, search & history |
+| **KYC Management** | Identity, address, income, business & property documents |
+| **Loan Products** | Business, Personal, Gold, LAP, Trust-based, PDC loans |
+| **Loan Applications** | Create applications with document upload & mediator assignment |
+| **Verification** | 8-point verification checklist (KYC, income, property, etc.) |
+| **Approval Workflow** | Maker-Checker with MD review & automated notifications |
+| **Disbursement** | Bank transfer & cash disbursement tracking |
+| **Loan Charges** | Configurable fees (processing, legal, GST, penal, etc.) |
+| **Interest Config** | Schemes, collection methods, calculation types |
+| **EMI Config** | Repayment methods & frequencies |
+| **EMI Schedule** | Auto-generated installment tables |
+| **Collections** | Cash, bank, online with receipt generation |
+| **Loan Operations** | Renewal, top-up, foreclosure, closure |
+| **Mediators** | Profile & commission management |
+| **Commissions** | One-time, trail, hybrid, recovery-linked |
+| **Interest Reports** | Weekly reports, projections, email automation |
+| **Notifications** | Email, WhatsApp, SMS for lifecycle events |
+| **Reports** | Daily, loan, customer, mediator, finance reports |
+| **Users & RBAC** | 8 roles with granular permissions |
+| **Audit & Security** | Activity logs, backup/restore |
+| **Integrations** | Email, SMS, WhatsApp, payment gateway APIs |
+| **Documents** | Centralized document repository |
+
+## Tech Stack
+
+- **Frontend:** Next.js 16 (App Router), React 19, TypeScript
+- **Styling:** Tailwind CSS 4
+- **Animations:** Framer Motion
+- **Charts:** Recharts
+- **Icons:** Lucide React
+- **UI Components:** Custom component library (shadcn-inspired)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/(dashboard)/     # All module pages with shared layout
+├── components/
+│   ├── ui/              # Base UI components
+│   ├── layout/          # Sidebar, header, app layout
+│   └── shared/          # Reusable page components
+└── lib/
+    ├── types.ts         # TypeScript interfaces
+    ├── mock-data.ts     # Sample data
+    ├── navigation.ts    # Sidebar navigation config
+    └── utils.ts         # Utility functions
+```
 
-## Learn More
+## Recommended Backend (Future)
 
-To learn more about Next.js, take a look at the following resources:
+Per SRS requirements:
+- **Backend:** Python (FastAPI)
+- **Database:** MongoDB
+- **Auth:** JWT + RBAC
+- **Storage:** AWS S3
+- **Reports:** Excel, PDF, CSV export
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Private — Client project.
+# SRS
